@@ -1,0 +1,11 @@
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+  <img  class="card-img-top" [src]="bien.image"/>
+  <div class="card-body">
+    <h4 class="card-title">{{ bien.title }}</h4>
+    <p class="card-text">{{ bien.description  | summerize: 2}}</p>
+  </div>
+  <div class="card-footer">
+    <button disabled class="btn btn-sm btn-danger">{{ bien.price | numberSeparator }} </button> {{ bien.createAt | timeLeft }}
+    <button class="btn btn-dark" [routerLink]="'/biens/'+bien.id"> Reserver </button>
+  </div>
+</div>

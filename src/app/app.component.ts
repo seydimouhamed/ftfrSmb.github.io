@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demomeet';
+  active = true;
+  value = '';
+
+  receiveSearch(searchValue: string): void {
+    this.title = 'dfs';
+  }
 }

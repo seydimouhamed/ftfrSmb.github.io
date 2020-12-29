@@ -1,0 +1,7 @@
+
+
+  <input class="form-control mr-sm-2" type="text" [(ngModel)]="recherche">
+
+<div class="row">
+  <app-item *ngFor="let bien of biens | filter: [recherche]: 'title'"  [bien]="bien" class="col-sm-4 mb-4"></app-item>
+</div>
